@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; }
+body { margin: 0; background: #e6e0d1; color: #33291f; }
+.hero {
+  position: relative;
+  display: flex;
+  min-height: 100svh;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #e6e0d1 url("public/hero.jpg") center / cover no-repeat;
+}
+.scrim, .fade { position: absolute; inset: 0; pointer-events: none; }
+.scrim { background: radial-gradient(ellipse at 50% 38%, rgba(245,242,233,.72) 0%, rgba(245,242,233,.34) 38%, rgba(245,242,233,0) 68%); }
+.fade { top: auto; height: 10rem; background: linear-gradient(to bottom, transparent, #e6e0d1); }
+.arc { position: absolute; top: 8%; left: 50%; width: min(1100px, 120vw); transform: translateX(-50%); }
+.content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; padding: 0 1.5rem; text-align: center; }
+.label { margin: 0 0 2rem; color: rgba(51,41,31,.7); font: 11px "Space Mono", monospace; letter-spacing: .24em; text-transform: uppercase; }
+.mark { filter: drop-shadow(0 1px 2px rgba(0,0,0,.15)); }
+h1 { margin: 1.75rem 0 0; font: 500 clamp(3.5rem, 11vw, 7.5rem)/1 "Cormorant Garamond", Georgia, serif; letter-spacing: .02em; }
+::selection { background: #3d5a3f; color: #f5f2e9; }
